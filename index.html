@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraGeek</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./imagens/Coração.png">
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <img src="./imagens/Logo AluraGeek.png" alt="Logo AluraGeek" class="header-logo">
+  </header>
+
+  <main class="main-content">
+    
+    <section class="form-container">
+      <h2 class="form-title">Adicionar Produto:</h2>
+      <form id="product-form">
+        <label for="product-name" class="form-label">Nome do Produto:</label>
+        <input type="text" id="product-name" class="form-input" placeholder="Digite o nome do produto" required>
+        
+        <label for="product-price" class="form-label">Valor:</label>
+        <input type="number" id="product-price" class="form-input" step="any" placeholder="Digite o valor do produto" required>
+        
+        <label for="product-image-url" class="form-label">URL da Imagem:</label>
+        <input type="url" id="product-image-url" class="form-input" placeholder="Digite a URL da imagem" required>
+        <div id="image-error" style="color: red; font-size: 12px; display: none;">Link inválido, apenas imagens .png ou .jpg</div>
+
+
+        <div class="form-buttons">
+          <button type="submit" class="save-button" id="save-button">Salvar</button>
+          <button type="button" class="clear-button" id="clear-button">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="product-section">
+      <h2>Meus Produtos</h2>
+      <div class="product-table">
+      <div class="product-grid" id="product-list">
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="./imagens/Logo AluraGeek.png" alt="Logo AluraGeek" class="footer-logo">
+    <p class="footer-text">©Desenvolvido por Floriste</p>
+    <p class="footer-subtext">Alura One 2024.</p>
+  </footer>
+
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/productList.js"></script>
+  <script type="module" src="js/formHandler.js"></script>
+</body>
+</html>
